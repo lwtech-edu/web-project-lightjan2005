@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset ="UTF-8">
+        <title>Kai Ying Chan Personal Website</title>
+        
+        <link href= "final.css" rel="stylesheet" type="text/css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet">
+    </head>
+    <body>
+        <header class = "KaiYingChanHeader">
+            <nav>
+                <div>
+                <p><a id="currentPage" href="index.html">Kai Ying Chan</a></p>
+                <ul>
+                    <li><a class="headerButtons" href="#">Home</a></li>
+                    <li><a class="headerButtons" href="#">About me</a></li>
+                    <li><a class="headerButtons" href="#">Education & Experience</a></li>
+                    <li><a class="headerButtons" href="#">Contact Me</a></li>
+                </ul>
+                </div>
+            </nav>
+        </header>
+        <main class = "indexMain">
+        <section id = "aboutMeSection">
+            <h2>About Me</h2>
+            <article>
+                    <img src="images/aboutMePic.jpg" width=384 height=511>
+            </article>
+            <article>
+                    <p>
+                        My name is Kai Ying Chan but I prefer to be called Lite Jan. I was born in September 28,1993.
+                        I graduated in a college in Taiwan and I majored Electrical Engineering. I served one year
+                        in the military according to law and worked as a semiconductor engineer for one year.
+                        Now I hope to change my major to computer science and I hope that I will have gained 
+                        the skills of becoming an accomplished programmer.
+                    </p>
+            </article>
+        </section>
+        <section id = "experienceSection">
+            <article>
+                <h3>Education</h3>
+                <p>
+                    <ul>
+                        <li>Chongming Junior High School (Sept, 2006 ~ June, 2009)</li>
+                        <li>The Affiliated Senior High School of National University of Tainan (Sept,2009 ~ June,2012)</li>
+                        <li>Fu Jen Catholic University (Sept,2012 ~ June,2016)</li>
+                        <li>Lake Washington Institute of Technology (Sept,2019 ~ )</li>
+                    </ul>
+                </p>
+            </article>
+            <article>
+                <h3>Club Experience</h3>
+                <p>
+                    <ul>
+                        <li>Fu Jen University Electrical Engineering Softball team (Sept,2012 ~ June,2016)</li>
+                        <li>AIESEC Cambodia Volunteer (Jan, 2015 ~ Feb,2015)</li>
+                        <li>Fu Jen University Electrical Engineering Softball team team leader (January,2016 ~ June,2016)</li>
+                        <li>Fu Jen University Softball team (Sept,2014 ~ June,2016)</li>
+                    </ul>
+                </p>
+            </article>
+            <article>
+                <h3>Job Experience</h3>
+                <p>
+                    <ul>
+                        <li>GO 100 English Institution English / Math Tutor (Oct, 2014 ~ Jan, 2015)</li>
+                        <li>Mandatory Military Service Republic of China Army Squad Leader (Sept, 2016 ~ Sept, 2017)</li>
+                        <li>ASE CHUNGLI (ASECL) Process Engineer (Sept, 2017 ~ Sept,2018)</li>
+                    </ul>
+                </p>
+            </article>
+        </section>
+        <div class ="contactForm">
+            <h2>Contact me</h2>
+            <form action = "../scripts/contact.php" method="post">
+            <h3>Self Introduction</h3>
+            <div class ="aboutYourselfContainer">
+            <label for = "name">Name:</label>
+                <input type="text" name="name" id="name" 
+                   size="20" maxlength="50" required
+                   placeholder="Name required*">
+            <label for = "email">Email:</label>
+                <input type="email" name="email" id="email" 
+                   size="20" maxlength="50" required
+                   placeholder="email required*">
+            <br>
+            <label for = "message">Message</label><br>
+                <textarea name = "message" id = "message" cols = "40" rows = "5"></textarea>
+            <br>
+            </div>
+                <input type = "submit" name = "submit" value = "Send Form" class = "button">
+                <input type = "reset" name = "reset" value = "Clear Form" class = "button">       
+            </form>
+        </div>     
+        </main>
+        <footer>
+            <h2>Follow Me</h2>
+            <nav>
+                <div>
+                
+                <ul>
+                    <li><a class="headerButtons" href="#">Home</a></li>
+                    <li><a class="headerButtons" href="#">About me</a></li>
+                    <li><a class="headerButtons" href="#">Education & Experience</a></li>
+                    <li><a class="headerButtons" href="#">Contact Me</a></li>
+                </ul>
+                </div>
+            </nav>
+            <div>
+                <a class="socialButton" href="https://www.facebook.com/profile.php?id=100000497922490"><i class="fab fa-facebook-f"></i></a>
+                <a class="socialButton" href="https://www.instagram.com/lightjan2005/"><i class="fab fa-instagram"></i></a>
+                <a class="socialButton" href="https://www.airbnb.com.tw/s/Taiwan-region/homes?refinement_paths%5B%5D=%2Fhomes&click_referer=t%3ASEE_ALL%7Csid%3A5a96b017-47f5-4442-8072-27dc3d1c00ce%7Cst%3ALANDING_PAGE_MARQUEE&search_type=autocomplete_click&screen_size=large&adults=1&price_max=1000&query=Taiwan%20region&place_id=ChIJL1cHXAbzbjQRaVScvwTwEec"><i class="fab fa-airbnb"></i></a>
+                <a class="socialButton" href="https://www.youtube.com/results?search_query=Travel+Taiwan"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>&copy;2020 Chan Kai Ying</p>
+        </footer>
+    </body>
+</html>
