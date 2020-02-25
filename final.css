@@ -11,7 +11,7 @@ body{
     margin:0;
 }
 header{
-    background-image: url(../webProject/images/Website-background.jpg);
+    background-image: url(images/Website-background.jpg);
     height:1000px;
     background-size:100% 100%;
     background-repeat:no-repeat;
@@ -31,22 +31,15 @@ nav div{
     width:90%;
     min-width: 1000px;
 }
-#currentPage{
-    border-left: solid 5px #2ABFFB;
-    border-right:solid 5px #2ABFFB;
-    padding:0px 10px 0px 10px;
-}
-#navCurrentPage{
-    border-left: solid 5px #2ABFFB;
-    border-right:solid 5px #2ABFFB;
-}
+
 nav p {
     font-family:'Calistoga', cursive;;
-    color: #222;
+    color: #FFF;
     font-size:30px;
     line-height:55px;
     float:left;
     padding:0px 20px;
+
 }
 nav p a{
     text-decoration: none;
@@ -68,8 +61,8 @@ nav ul li{
     padding: 5px 15px 5px 15px;
     line-height:0px;
     margin:5px;
-    border-left:solid;
-    border-right:solid;
+    border-left:solid #FFF;
+    border-right:solid #FFF;
 }
 
 nav ul li a{
@@ -138,6 +131,9 @@ nav ul li ul li a:hover{
     font-size:24px;
     margin: 20px;
 }
+#aboutMeSection h4{
+    text-align: left;
+}
 .aboutMePic{
     float: left;
     width:auto;
@@ -181,50 +177,7 @@ nav ul li ul li a:hover{
     left:30px;
     font-size: 17px;
 }
-footer{
-    background-color:#18181a;
-    height:150px;
-    padding:20px;
-    position: relative;
-    top:60px;
-}
-footer h2{
-    color:#FFF;
-    text-align: center;
-    font-size:30px;
-}
-footer div{
-    width:100%;
-    text-align: center;
-}
-.socialButton{
-    display:inline-block;
-    width:60px;
-    height:60px;
-    background:#f1f1f1;
-    margin:10px;
-    border-radius:30%;
-    box-shadow: 0 5px 15px -5px #FFF;
-    color: #3498db;
-    overflow:hidden;
-    position:relative;
-}
-.socialButton i{
-    line-height:60px;
-    font-size:26px;
-    transition: 0.2s linear;
-}
-.socialButton:hover i{
-    transform:scale(1.3);
-}
-footer h2{
-    font-family:'Ubuntu Mono', monospace;
-}
-footer p{
-    color:#FFF;
-    text-align: center;
-    font-family: cursive;
-}
+
 
 /* ---- Contact Us CSS ----*/
 
@@ -291,4 +244,70 @@ input, textarea{
     background-color: #F2F2F2;
     padding:5px 30px 25px 30px;
     border-radius: 10px;
+}
+
+/*---- Footer CSS ----*/
+
+footer{
+    background-color:#18181a;
+    height:200px;
+    padding:20px;
+    position: relative;
+    top:60px;
+}
+footer h2{
+    color:#FFF;
+    text-align: center;
+    font-size:30px;
+}
+#footerNav ul li{
+    float:left;
+    list-style: none;
+    position:relative;
+    font-size:12px;
+    padding: 5px 15px 5px 15px;
+    line-height:0px;
+    margin:5px;
+    border-left:solid #FFF;
+    border-right:solid #FFF;
+}
+#footerNav ul li a{
+    display:inline-block;
+    font-family:'Kalam', cursive;
+    color:rgb(255, 255, 255);
+    font-size:12px;
+    padding:22px 44px;
+    text-decoration: none;
+}
+footer div{
+    width:100%;
+    text-align: center;
+}
+.socialButton{
+    display:inline-block;
+    width:60px;
+    height:60px;
+    background:#f1f1f1;
+    margin:10px;
+    border-radius:30%;
+    box-shadow: 0 5px 15px -5px #FFF;
+    color: #3498db;
+    overflow:hidden;
+    position:relative;
+}
+.socialButton i{
+    line-height:60px;
+    font-size:26px;
+    transition: 0.2s linear;
+}
+.socialButton:hover i{
+    transform:scale(1.3);
+}
+footer h2{
+    font-family:'Ubuntu Mono', monospace;
+}
+footer p{
+    color:#FFF;
+    text-align: center;
+    font-family: cursive;
 }
