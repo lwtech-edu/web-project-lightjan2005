@@ -3,9 +3,10 @@
     <head>
         <meta charset ="UTF-8">
         <title>Kai Ying Chan Personal Website</title>
-        
+        <script src = "final.js"></script>
         <link href= "final.css" rel="stylesheet" type="text/css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet">
+        <script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
         <header class = "KaiYingChanHeader">
@@ -78,24 +79,27 @@
         </section>
         <div class ="contactForm">
             <h2>Contact me</h2>
-            <form action = "../scripts/contact.php" method="post">
+            <form action = "../scripts/contact.php" method="post" id ="submitForm">
             <h3>Self Introduction</h3>
             <div class ="aboutYourselfContainer">
             <label for = "name">Name:</label>
-                <input type="text" name="name" id="name" 
+            <input type="text" name="name" id="name" 
                    size="20" maxlength="50" required
                    placeholder="Name required*">
+            <span id = firstNameError>*</span>
+            <br>
             <label for = "email">Email:</label>
-                <input type="email" name="email" id="email" 
+            <input type="email" name="email" id="email" 
                    size="20" maxlength="50" required
                    placeholder="email required*">
+            <span id = firstNameError>*</span>
             <br>
             <label for = "message">Message</label><br>
                 <textarea name = "message" id = "message" cols = "40" rows = "5"></textarea>
             <br>
             </div>
-                <input type = "submit" name = "submit" value = "Send Form" class = "button">
-                <input type = "reset" name = "reset" value = "Clear Form" class = "button">       
+                <input type = "submit" name = "submit" value = "Send Form" class = "button" id = "submit">
+                <input type = "reset" name = "reset" value = "Clear Form" class = "button" id = "reset">       
             </form>
         </div>     
         </main>
