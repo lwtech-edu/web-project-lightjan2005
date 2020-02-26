@@ -1,15 +1,20 @@
-// Kai Ying Chan
 // Document ready function for JQuery code
 $(function() {
     // Give focus to Email address on document load
     $("#name").focus();
   
     // Double click handler for text input boxes
-    $("input[type='text']").dblclick(function () 
-    {
+    $("input[type='text']").dblclick(function () {
       $(this).val("").next().text("*");
     })
-    
+  
+    // Click handler for clear entries button
+    // Must put back asterisk on all error text fields
+    $("#reset").click(function () {
+      $("input[type='text']").val("").next().text("*");
+      $("#name").focus();
+    });
+  
     // Click handler for join list button
     $("#submit").click(
       function() {
@@ -23,14 +28,18 @@ $(function() {
         }
       }
     );
+    
+    $("#projectsToHide").hide();
+
+
   });
+  
   
   /**
    * validateEmail - validates the the entry in the email_address fields
    * @return (boolean) - true if email_address is valid, false otherwise
    */
-  function validateEmail() 
-  {
+  function validateEmail() {
     let isValid = true;
     const emailAddress1 = $("#email");
     const emailAddress1Val = emailAddress1.val().trim();
@@ -46,7 +55,6 @@ $(function() {
     } else {
       emailAddress1.next().text("");  // Clear error or asterisk
     } 
-  
     return isValid;
   }
   
@@ -55,25 +63,19 @@ $(function() {
    *                at least two letters
    * @return (boolean) - true if name is valid, false otherwise
    */
-  function validateName() 
-  {
+  function validateName() {
     let isValid = true;
     const firstName = $("#name");
     const firstNameVal = firstName.val().trim()  
     const pattern = /^([a-zA-Z]{2})/;
-
-    if (firstNameVal == "") 
-    {
+  
+    if (firstNameVal == "") {
       firstName.next().text("This field is required.");
       isValid = false;
-    } 
-    else if (! pattern.test(firstNameVal)) 
-    {
+    } else if (! pattern.test(firstNameVal)) {
       firstName.next().text("Must be at least two letters");
       isValid = false;
-    } 
-    else 
-    {
+    } else {
       firstName.next().text(""); // Clear error or asterisk
     }
   

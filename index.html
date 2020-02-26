@@ -15,16 +15,17 @@
                 <p>Kai Ying Chan</p>
                 <ul>
                     <li><a class="headerButtons" href="#">Home</a></li>
-                    <li><a class="headerButtons" href="#">About me</a></li>
-                    <li><a class="headerButtons" href="#">Education & Experience</a></li>
-                    <li><a class="headerButtons" href="#">Contact Me</a></li>
+                    <li><a class="headerButtons" href="#aboutMeSection">About me</a></li>
+                    <li><a class="headerButtons" href="#experienceSection">Education & Experience</a></li>
+                    <li><a class="headerButtons" href="#contactTitle">Contact Me</a></li>
                 </ul>
                 </div>
             </nav>
+            <h2>This is my first website using Javascript & Jquery</h2>
         </header>
         <main class = "indexMain">
         <section id = "aboutMeSection">
-            <h2>About Me</h2>
+            <h2 id>About Me</h2>
             <article>
                     <img src="images/aboutMePic.jpg" width=384 height=511>
             </article>
@@ -39,8 +40,16 @@
                     </p>
                 <h4>Hobbies:</h4>
                     <p>
-                        During my spare time I usually 
+                        During my spare time I like to do outdoor activities. I played basketball in
+                        elementary and middle school. I played volleyball in high school and played 
+                        softball in college. I also like to gym to keep my body healthy. In addition to outdoor
+                        activities, I also like indoor activities. I like playing computer games and
+                        singing.
                     </p>
+                <h4>Projects</h4>
+                <p id = "projectsToHide">
+                    <a href="http://ddion.com/htmlf19pm/Kai_Chan/">First HTML website</a>
+                </p>
             </article>
         </section>
         <section id = "experienceSection">
@@ -78,8 +87,8 @@
             </article>
         </section>
         <div class ="contactForm">
-            <h2>Contact me</h2>
-            <form action = "../scripts/contact.php" method="post" id ="submitForm">
+            <h2 id ="contactTitle">Contact me</h2>
+            <form method="post" id ="submitForm">
             <h3>Self Introduction</h3>
             <div class ="aboutYourselfContainer">
             <label for = "name">Name:</label>
@@ -107,14 +116,6 @@
             
             <h2>Follow Me</h2>
             <div>
-                <div id = "footerNav">
-                    <ul>
-                        <li><a class="headerButtons" href="#">Home</a></li>
-                        <li><a class="headerButtons" href="#">About me</a></li>
-                        <li><a class="headerButtons" href="#">Education & Experience</a></li>
-                        <li><a class="headerButtons" href="#">Contact Me</a></li>
-                    </ul>
-                </div>
                 <a class="socialButton" href="https://www.facebook.com/profile.php?id=100000497922490"><i class="fab fa-facebook-f"></i></a>
                 <a class="socialButton" href="https://www.instagram.com/lightjan2005/"><i class="fab fa-instagram"></i></a>
                 <a class="socialButton" href="https://www.airbnb.com.tw/s/Taiwan-region/homes?refinement_paths%5B%5D=%2Fhomes&click_referer=t%3ASEE_ALL%7Csid%3A5a96b017-47f5-4442-8072-27dc3d1c00ce%7Cst%3ALANDING_PAGE_MARQUEE&search_type=autocomplete_click&screen_size=large&adults=1&price_max=1000&query=Taiwan%20region&place_id=ChIJL1cHXAbzbjQRaVScvwTwEec"><i class="fab fa-airbnb"></i></a>
