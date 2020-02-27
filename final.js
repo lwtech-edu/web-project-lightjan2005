@@ -15,7 +15,7 @@ $(function() {
       $("#name").focus();
     });
   
-    // Click handler for join list button
+    // Click handler for submit button
     $("#submit").click(
       function() {
         // Want to run both validation functions
@@ -29,9 +29,19 @@ $(function() {
       }
     );
     
+
+    // Hide the projects
     $("#projectsToHide").hide();
+    
+    // When click the h4, show the projects
+    $("#projectButtons").click(
+        function(){
+            $("#projectsToHide").toggle(1000);
+        }
+    );
+  
 
-
+  // end document ready function
   });
   
   
@@ -67,7 +77,7 @@ $(function() {
     let isValid = true;
     const firstName = $("#name");
     const firstNameVal = firstName.val().trim()  
-    const pattern = /^([a-zA-Z]{2})/;
+    const pattern = /^[a-zA-Z]{2}/;
   
     if (firstNameVal == "") {
       firstName.next().text("This field is required.");

@@ -182,6 +182,17 @@ nav ul li ul li a:hover{
     left:30px;
     font-size: 17px;
 }
+#projectButton{
+    border: solid;
+    width: 90px;
+    border-radius: 15px;
+}
+#projectButton:hover{
+    color:#DC3030;
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
 
 
 /* ---- Contact Us CSS ----*/
