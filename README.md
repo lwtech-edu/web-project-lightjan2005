@@ -7,7 +7,8 @@ This is a wire frame of the website that I will be creating. Will try my best to
 
 I added some information about the wireframe.
 
- 2/27/2020 Web Phase 2 
+2/27/2020 Web Phase 2 
+
 Made the whole website with HTML and CSS
 added javascript functions so that it would hide my projects at first, when press button will toggle the projects
 update input validation though the message box still doesn't work
