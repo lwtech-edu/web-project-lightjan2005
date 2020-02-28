@@ -1,18 +1,24 @@
 // Document ready function for JQuery code
 $(function() {
+
+    // Input Validation
     // Give focus to Email address on document load
-    $("#name").focus();
+    $("#fullName").focus();
   
     // Double click handler for text input boxes
     $("input[type='text']").dblclick(function () {
       $(this).val("").next().text("*");
     })
+    // Double click handler for email type input boxes
+    $("input[type='email']").dblclick(function () {
+        $(this).val("").next().text("*");
+      })
   
     // Click handler for clear entries button
     // Must put back asterisk on all error text fields
     $("#reset").click(function () {
       $("input[type='text']").val("").next().text("*");
-      $("#name").focus();
+      $("#fullName").focus();
     });
   
     // Click handler for submit button
@@ -23,23 +29,29 @@ $(function() {
         let validName  = validateName();
         
        // Submit the form if email and name are valid
-        if (validEmail && validName) {
+        if (validEmail && validName && validateMessage) {
           $("#submitForm").submit(); 
         }
       }
     );
+    // End of input Validation
     
-
+      
     // Hide the projects
     $("#projectsToHide").hide();
     
     // When click the h4, show the projects
-    $("#projectButtons").click(
+    $("#projectButton").click(
         function(){
             $("#projectsToHide").toggle(1000);
-        }
-    );
-  
+        });
+        
+    // change the image after clicking on picture
+        $("#changeAboutMePic").click(function(){
+        // Change src attribute of image
+        $(this).attr("src", "images/aboutMePic2.jpg");
+    });  
+    
 
   // end document ready function
   });
@@ -75,18 +87,46 @@ $(function() {
    */
   function validateName() {
     let isValid = true;
-    const firstName = $("#name");
-    const firstNameVal = firstName.val().trim()  
-    const pattern = /^[a-zA-Z]{2}/;
+    const firstName = $("#fullName");
+    const firstNameVal = firstName.val().trim();
+    const pattern = /^([a-zA-Z]){2}/;
   
     if (firstNameVal == "") {
       firstName.next().text("This field is required.");
       isValid = false;
-    } else if (! pattern.test(firstNameVal)) {
+    } 
+    else if (! pattern.test(firstNameVal)) 
+    {
       firstName.next().text("Must be at least two letters");
       isValid = false;
-    } else {
+    } 
+    else 
+    {
       firstName.next().text(""); // Clear error or asterisk
+    }
+  
+    return isValid;  
+  }
+
+  // not working right now
+  function validateMessage() {
+    let isValid = true;
+    const messageBox = $("#message");
+    const messageBoxVal = messageBox.val().trim();
+    const pattern = /^([a-zA-Z]){2}/;
+  
+    if (messageBoxVal == "") {
+      messageBox.next().text("This field is required.");
+      isValid = false;
+    } 
+    else if (! pattern.test(messageBoxVal)) 
+    {
+      messageBox.next().text("Must be at least two letters");
+      isValid = false;
+    } 
+    else 
+    {
+      messageBox.next().text(""); // Clear error or asterisk
     }
   
     return isValid;  

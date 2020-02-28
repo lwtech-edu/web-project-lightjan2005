@@ -28,7 +28,7 @@
         <section id = "aboutMeSection">
             <h2 id>About Me</h2>
             <article>
-                    <img src="images/aboutMePic.jpg" width=384 height=511>
+                    <img src="images/aboutMePic.jpg" width=384 height=511 id="changeAboutMePic">
             </article>
             <article>
                 <h4>Introduction:</h4>
@@ -47,8 +47,11 @@
                         activities, I also like indoor activities. I like playing computer games and
                         singing.
                     </p>
+                    
                 <h4 id= "projectButton">Projects</h4>
                 <p id = "projectsToHide">
+                    <a href="http://ddion.com/htmlf19pm/Kai_Chan/"><img src ="images/htmlCSS.png" width=215 height=138.5 ></a>
+                    <br>
                     <a href="http://ddion.com/htmlf19pm/Kai_Chan/">First HTML website</a>
                 </p>
             </article>
@@ -93,23 +96,27 @@
             <h3>Self Introduction</h3>
             <div class ="aboutYourselfContainer">
             <label for = "name">Name:</label>
-            <input type="text" name="name" id="name" 
+            <input type="text" name="name" id="fullName" 
                    size="20" maxlength="50" required
                    placeholder="Name required*">
-            <span id = firstNameError>*</span>
+            <span id = nameError>*</span>
             <br>
             <label for = "email">Email:</label>
             <input type="email" name="email" id="email" 
                    size="20" maxlength="50" required
                    placeholder="email required*">
-            <span id = firstNameError>*</span>
+            <span id = emailError>*</span>
             <br>
-            <label for = "message">Message</label><br>
-                <textarea name = "message" id = "message" cols = "40" rows = "5"></textarea>
+            <label for = "message">Message:</label>
+                <textarea type = "text" name = "message" id = "message" cols = "40" rows = "5" required
+                placeholder="text required*" ></textarea>
+                <span id = messageError>*</span>
             <br>
             </div>
-                <input type = "submit" name = "submit" value = "Send Form" class = "button" id = "submit">
-                <input type = "reset" name = "reset" value = "Clear Form" class = "button" id = "reset">       
+            <h4 id = "submit" class = "button">Submit</h4>
+            <h4 id = "reset" class ="button">Reset</h4>
+                <!-- <input type = "submit" name = "submit" value = "Send Form" class = "button" id = "submitButton"> -->
+                <!-- <input type = "reset" name = "reset" value = "Clear Form" class = "button" id = "resetButton">  -->     
             </form>
         </div>     
         </main>
