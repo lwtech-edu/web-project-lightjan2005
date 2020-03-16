@@ -10,6 +10,8 @@
 body{
     margin:0;
 }
+
+/* This is the backround image part of my webpage */
 header{
     background-image: url(images/Website-background.jpg);
     height:1000px;
@@ -18,6 +20,8 @@ header{
     position: relative;
     top:60px;
     }
+
+/* This part is the navigation menu */
 nav{
     width:100%;
     height:auto;
@@ -100,6 +104,9 @@ nav ul li ul li a{
 nav ul li ul li a:hover{
     background-color:#BDBDBD;
 }
+
+/* End of navigation bar */
+
 .KaiYingChanHeader h2{
     position:relative;
     top: 150px;
@@ -126,6 +133,11 @@ nav ul li ul li a:hover{
     font-size:100px;
     padding:0px 20px 30px 20px;
     font-family: 'Courgette', cursive;
+}
+.imageStyle{
+    height:100px;
+    width:100px;
+    border:3px solid grey;
 }
 #aboutMeSection article{
     display: inline-block;

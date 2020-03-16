@@ -10,6 +10,7 @@
         
     </head>
     <body>
+        <!-- This is the navigation menu of my website-->
         <header class = "KaiYingChanHeader">
             <nav>
                 <div>
@@ -22,14 +23,26 @@
                 </ul>
                 </div>
             </nav>
+            <!-- Content inside background image -->
             <h2>This is my first website using Javascript & Jquery</h2>
         </header>
         <main class = "indexMain">
+            <!-- About me Section where I will put an image gallery made with js and jquery-->
         <section id = "aboutMeSection">
             <h2 id>About Me</h2>
             <article>
-                    <img src="images/aboutMePic.jpg" width=384 height=511 id="changeAboutMePic">
+                
+                    <img src="images/aboutMePic.jpg" width=500 height=600 id="changeAboutMePic" style=" border: 3px solid grey">
+                    <br>
+                    <div id = "imageContainer">
+                        <img src = "images/aboutMePic.jpg" class = "imageStyle">
+                        <img src = "images/aboutMePic2.jpg" class = "imageStyle">
+                        <img src = "images/aboutMePic3.jpg" class = "imageStyle">
+                        <img src = "images/aboutMePic4.jpg" class = "imageStyle">
+                        <img src = "images/aboutMePic5.jpg" class = "imageStyle">
+                    </div>
             </article>
+            <!-- Some content about myself-->
             <article>
                 <h4>Introduction:</h4>
                     <p>
@@ -47,15 +60,18 @@
                         activities, I also like indoor activities. I like playing computer games and
                         singing.
                     </p>
-                    
+                <!-- This is why I put my projects and this is a button to toggle them-->
                 <h4 id= "projectButton">Projects</h4>
                 <p id = "projectsToHide">
+                    <!-- Actual page of my website-->
                     <a href="http://ddion.com/htmlf19pm/Kai_Chan/"><img src ="images/htmlCSS.png" width=215 height=138.5 ></a>
                     <br>
+                    <!-- Source code of website-->
                     <a href="http://ddion.com/htmlf19pm/Kai_Chan/">First HTML website</a>
                 </p>
             </article>
         </section>
+        <!-- This is the experience section -->
         <section id = "experienceSection">
             <article>
                 <h3>Education</h3>
@@ -90,7 +106,9 @@
                 </p>
             </article>
         </section>
+        <!-- Contact form of my webpage for them to contact me -->
         <div class ="contactForm">
+            <!-- Will send email to me after submission -->
             <h2 id ="contactTitle">Contact me</h2>
             <form method="post" id ="submitForm" action="mailto:lightjan2005@gmail.com" method="get">
             <h3>Self Introduction</h3>
@@ -121,13 +139,13 @@
         </div>     
         </main>
         <footer>
-            
+            <!-- This is the footer of my website and the buttons -->
             <h2>Follow Me</h2>
             <div>
                 <a class="socialButton" href="https://www.facebook.com/profile.php?id=100000497922490"><i class="fab fa-facebook-f"></i></a>
                 <a class="socialButton" href="https://www.instagram.com/lightjan2005/"><i class="fab fa-instagram"></i></a>
-                <a class="socialButton" href="https://www.airbnb.com.tw/s/Taiwan-region/homes?refinement_paths%5B%5D=%2Fhomes&click_referer=t%3ASEE_ALL%7Csid%3A5a96b017-47f5-4442-8072-27dc3d1c00ce%7Cst%3ALANDING_PAGE_MARQUEE&search_type=autocomplete_click&screen_size=large&adults=1&price_max=1000&query=Taiwan%20region&place_id=ChIJL1cHXAbzbjQRaVScvwTwEec"><i class="fab fa-airbnb"></i></a>
-                <a class="socialButton" href="https://www.youtube.com/results?search_query=Travel+Taiwan"><i class="fab fa-youtube"></i></a>
+                <a class="socialButton" href="https://www.linkedin.com/in/jan-lite-4793b81a4/"><i class="fab fa-linkedin"></i></a>
+                <a class="socialButton" href="https://twitter.com/lightjan2005"><i class="fab fa-twitter-square"></i></a>
             </div>
             <p>&copy;2020 Chan Kai Ying</p>
         </footer>

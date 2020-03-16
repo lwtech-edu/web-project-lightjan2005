@@ -1,6 +1,35 @@
 // Document ready function for JQuery code
 $(function() {
 
+    // code for about Me Pic animation
+
+    // code from youtube: https://www.youtube.com/watch?v=oBcKmmjpwls&t=209s
+    // code for image container when mouse over and mouse out (changes color and cursor when hover)
+    $("#imageContainer").on({
+      mouseover:function(){
+        $(this).css({
+          'cursor':'hand',
+          'border-color':'red'
+        });
+      },
+      mouseout: function(){
+        $(this).css({
+          'cursor':'default',
+          'border-color':'grey'
+        });
+      },
+
+      click: function(){
+        var imageURL = $(this).attr('src');
+        $('#changeAboutMePic').fadeOut(500,function(){
+          $(this).attr('src',imageURL);
+        }).fadeIn(500);
+      }
+      
+
+    }, 'img');
+
+
     // Input Validation
     // Give focus to Email address on document load
     $("#fullName").focus();
@@ -51,6 +80,7 @@ $(function() {
         // Change src attribute of image
         $(this).attr("src", "images/aboutMePic2.jpg");
     });  
+    
     
 
   // end document ready function

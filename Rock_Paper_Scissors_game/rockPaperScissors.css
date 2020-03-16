@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+nav{
+    text-align: center;
+    border: 2px solid;
+    font-family: cursive;
+    height:200px;
+    background-color:rgb(255,100,255);
+    color: rgba(100,100,100);
+}
