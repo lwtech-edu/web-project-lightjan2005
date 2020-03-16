@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset ="UTF-8">
+        <title>Contact us</title>
+        <link href = "../css/main.css" rel = "stylesheet" type = "text/css">
+    </head>
+    <body class="contactPage">
+        <header>
+            <img>
+            <h1>My website - Contact us!</h1>
+            <nav>
+                <ul>
+                    <li><a href = "../index.html">Home</a></li>
+                    <li><a href = "about.html">About</a></li>
+                    <li><a href = "gallery.html">Gallery</a></li>
+                    <li><a class="currentPage" href = "contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <div class ="contactForm">
+                <h3>Contact Us</h3>
+                <form action = "../scripts/contact.php" method="post">
+                <label for = "firstName">First Name:</label>
+                    <input type="text" name="firstName" id="firstName" 
+                       size="20" maxlength="50" required
+                       placeholder="Name required">
+                <label for = "email">Email:</label>
+                    <input type="email" name="email" id="email" 
+                       size="20" maxlength="50" required
+                       placeholder="email required">
+                <label for = "state">State:</label>
+                    <select name = "state" id="state">
+                        <option>Choose one</option>
+                        <option value="WA">Washington</option>
+                        <option value="OR">Oregon</option>
+                        <option value="ID">Idaho</option>
+                    </select>
+                
+                <div class="hobbies">
+                    <h4>Hobbies</h4>
+                    <label>
+                        Cooking
+                        <input type="checkbox" name = "interests" id = "cooking"
+                               value = "cooking">
+                    </label>
+                    <label>
+                        Hiking
+                        <input type="checkbox" name = "interests" id = "hiking"
+                               value = "hiking">
+                    </label>
+                    <label>
+                        Fishing
+                        <input type="checkbox" name = "interests" id = "fishing"
+                               value = "fishing">
+                    </label>
+                </div>    
+                
+                    <div class = "agree">
+                        <h4>Do you agree?</h4>
+                        <label>YES: 
+                            <input type = "radio" name = "agree" id = "yes"
+                                   value = "yes">
+                        </label>
+                        <label>No: 
+                            <input type = "radio" name = "agree" id = "no"
+                                   value = "no" checked>
+                        </label>
+                    </div>
+                    <label for = "comments">Comments:</label><br>
+                        <textarea name = "comments" id = "comments" cols = "40" rows = "10"></textarea>
+                    <br>
+                    <input type = "submit" name = "submit" value = "Send Form">
+                    <input type = "reset" name = "reset" value = "Clear Form">
+                    
+                    
+                </form>
+            </div>
+            <section class = "map">
+                <h3>Find us</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2684.955854475687!2d-122.1692156841767!3d47.70469458918946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54900d79edd95479%3A0x867448f4fd1e313c!2sLake%20Washington%20Institute%20of%20Technology!5e0!3m2!1sen!2sus!4v1573620049308!5m2!1sen!2sus" width="400" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </section>
+            <section class = "phone">
+                <h3>Call us</h3>
+            </section>
+        </main>
+        <footer>
+            <section><h4>section 1</h4></section>
+            <section><h4>section 2</h4></section>
+            <section><h4>section 3</h4></section>
+        </footer>
+  
+    </body>
+
+
+</html>
