@@ -8,7 +8,7 @@ $(function() {
     $("#imageContainer").on({
       mouseover:function(){
         $(this).css({
-          'cursor':'hand',
+          'cursor':'pointer',
           'border-color':'red'
         });
       },
@@ -19,6 +19,7 @@ $(function() {
         });
       },
 
+      // When Click image change change image and fadeOut
       click: function(){
         var imageURL = $(this).attr('src');
         $('#changeAboutMePic').fadeOut(500,function(){
