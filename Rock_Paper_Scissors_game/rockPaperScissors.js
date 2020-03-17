@@ -32,7 +32,11 @@ function pick(gameChoice) {
   }
 
   // This is a function to determine who wins and display the result
+var userWin = 0;
+var comWin = 0;
   function comparison(user,computer){
+      
+    
       // an if statement when the user chooses Rock
       if (user == "rock"){
           // an if statement when computer chooses rock
@@ -44,11 +48,13 @@ function pick(gameChoice) {
           else if (computer == "paper"){
               // Display the result
               document.getElementById("endResult").innerHTML = "Paper wins!(Computer)";
+              comWin++;
           }
           // an else statement for scissors
           else{
               //Display the result
               document.getElementById("endResult").innerHTML = "Rock wins!(You)";
+              userWin++;
           }
       }
       // an else if statement when the user chooses paper
@@ -57,6 +63,7 @@ function pick(gameChoice) {
         if (computer == "rock"){
             // Display the result
             document.getElementById("endResult").innerHTML = "Paper wins!(You)";
+            userWin++;
         }
         // if computer chooses paper
         else if (computer == "paper"){
@@ -67,6 +74,7 @@ function pick(gameChoice) {
         else{
             // Display result
             document.getElementById("endResult").innerHTML = "Scissors wins!(Computer)";
+            comWin++;
         }
     }
       // an if statement when the user chooses Rock
@@ -75,11 +83,13 @@ function pick(gameChoice) {
         if (computer == "rock"){
             // Display result
             document.getElementById("endResult").innerHTML = "Rock wins!(Computer)";
+            comWin++;
         }
         // if computer chooses paper
         else if (computer == "paper"){
             // Display result
             document.getElementById("endResult").innerHTML = "Scissors wins!(You)";
+            userWin++;
         }
         // if computer chooses scissors
         else{
@@ -87,4 +97,6 @@ function pick(gameChoice) {
             document.getElementById("endResult").innerHTML = "The result is a tie!";
         }
     }
+    $('#user').html("User Wins: " + userWin);
+    $('#computer').html("Computer Wins: " + comWin);
   }
