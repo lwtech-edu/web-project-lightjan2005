@@ -18,7 +18,7 @@
                 <ul>
                     <li><a class="headerButtons" href="#">Home</a></li>
                     <li><a class="headerButtons" href="#aboutMeSection">About me</a></li>
-                    <li><a class="headerButtons" href="#experienceSection">Education & Experience</a></li>
+                    <li><a class="headerButtons" href="#projectButton">Education & Experience</a></li>
                     <li><a class="headerButtons" href="#contactTitle">Contact Me</a></li>
                 </ul>
                 </div>
@@ -93,6 +93,7 @@
                 </section>
             </article>
         </section>
+        <p id = "beginExperience"></p>
         <!-- This is the experience section -->
         <section id = "experienceSection">
             <article>
@@ -132,7 +133,7 @@
         <div class ="contactForm">
             <!-- Will send email to me after submission -->
             <h2 id ="contactTitle">Contact me</h2>
-            <form method="post" id ="submitForm" action="mailto:lightjan2005@gmail.com" method="get">
+            <form method="post" id ="submitForm">
             <h3>Self Introduction</h3>
             <div class ="aboutYourselfContainer">
             <label for = "name">Name:</label>
@@ -153,6 +154,7 @@
                 <span id = messageError>*</span>
             <br>
             </div>
+            <a id = "sendEmail" href="mailto:lightjan2005@gmail.com" hidden></a>
             <h4 id = "submit" class = "button">Submit</h4>
             <h4 id = "reset" class ="button">Reset</h4>
                 <!-- <input type = "submit" name = "submit" value = "Send Form" class = "button" id = "submitButton"> -->

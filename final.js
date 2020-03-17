@@ -26,12 +26,11 @@ $(function() {
           $(this).attr('src',imageURL);
         }).fadeIn(500);
       }
+
     }, 'img');
 
 
     // Input Validation
-    // Give focus to Email address on document load
-    $("#fullName").focus();
   
     // Double click handler for text input boxes
     $("input[type='text']").dblclick(function () {
@@ -55,9 +54,10 @@ $(function() {
         // Want to run both validation functions
         let validEmail = validateEmail();
         let validName  = validateName();
+        let validMessage = validateMessage();
         
-       // Submit the form if email and name are valid
-        if (validEmail && validName && validateMessage) {
+       // Submit the form if email and name and message are valid
+        if (validEmail && validName && validMessage) {
           $("#submitForm").submit(); 
         }
       }
@@ -86,28 +86,7 @@ $(function() {
   });
   
   
-  /**
-   * validateEmail - validates the the entry in the email_address fields
-   * @return (boolean) - true if email_address is valid, false otherwise
-   */
-  function validateEmail() {
-    let isValid = true;
-    const emailAddress1 = $("#email");
-    const emailAddress1Val = emailAddress1.val().trim();
-    const pattern = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
-              
-    // validate the first email address - not empty and matches pattern
-    if (emailAddress1Val == "") { 
-      emailAddress1.next().text("This field is required.");
-      isValid= false;
-    } else if (! pattern.test(emailAddress1Val)) {
-      emailAddress1.next().text("Not a valid email address.");
-      isValid = false;
-    } else {
-      emailAddress1.next().text("");  // Clear error or asterisk
-    } 
-    return isValid;
-  }
+  
   
   /**
    * validateName - validates the the entry in the first_name field is
@@ -137,20 +116,42 @@ $(function() {
     return isValid;  
   }
 
-  // not working right now
+  /**
+   * validateEmail - validates the the entry in the email_address fields
+   * @return (boolean) - true if email_address is valid, false otherwise
+   */
+  function validateEmail() {
+    let isValid = true;
+    const emailAddress1 = $("#email");
+    const emailAddress1Val = emailAddress1.val().trim();
+    const pattern = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+              
+    // validate the first email address - not empty and matches pattern
+    if (emailAddress1Val == "") { 
+      emailAddress1.next().text("This field is required.");
+      isValid = false;
+    } 
+    else if (! pattern.test(emailAddress1Val)) 
+    {
+      emailAddress1.next().text("Not a valid email address.");
+      isValid = false;
+    } else {
+      emailAddress1.next().text("");  // Clear error or asterisk
+    } 
+    return isValid;
+  }
+
+  /**
+   * validateMessage- validates the entry in the message field
+   * @return (boolean) true if message is valid, false otherwise
+   */
   function validateMessage() {
     let isValid = true;
     const messageBox = $("#message");
     const messageBoxVal = messageBox.val().trim();
-    const pattern = /^([a-zA-Z]){2}/;
   
     if (messageBoxVal == "") {
       messageBox.next().text("This field is required.");
-      isValid = false;
-    } 
-    else if (! pattern.test(messageBoxVal)) 
-    {
-      messageBox.next().text("Must be at least two letters");
       isValid = false;
     } 
     else 
@@ -171,4 +172,13 @@ $(function() {
      Test the following invalid entries for name:
      - '', '  ', 'a ', '12', '#$', 'a1'
   */
+ function sendEmail(){
+  var name = $("#fullName").val();
+  var email = $("#email").val();
+  var message = $("#message").val();
+  
+  var body = `My Name is: ${name} %0a%0dMy Email Address is: ${email} %0a%0dMessage:%0a%0d ${message}`;
+  $("#sendEmail").attr("href",`mailto:lightjan2005@gmail.com?subject=Contact Me&body=${body}`);
+  document.getElementById("sendEmail").click();
+}
   
