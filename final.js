@@ -26,8 +26,6 @@ $(function() {
           $(this).attr('src',imageURL);
         }).fadeIn(500);
       }
-      
-
     }, 'img');
 
 

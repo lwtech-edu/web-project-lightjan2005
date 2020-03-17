@@ -168,8 +168,18 @@ nav ul li ul li a:hover{
     font-family: 'Josefin Slab', serif;    
 }
 
-.projectsToHide div{
-    display: inline-table;
+#projectsToHide div{
+    display: inline-block;
+    margin:30px;
+}
+
+/* Code for source code button */
+.sourceCodeButton{
+    height:40px;
+    width: 100px;
+    background-color: #0D99E5;
+    margin:5px;
+    font-size: 15px;
 }
 
 /* Experience Section*/
