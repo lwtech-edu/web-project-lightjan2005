@@ -172,13 +172,3 @@ $(function() {
      Test the following invalid entries for name:
      - '', '  ', 'a ', '12', '#$', 'a1'
   */
- function sendEmail(){
-  var name = $("#fullName").val();
-  var email = $("#email").val();
-  var message = $("#message").val();
-  
-  var body = `My Name is: ${name} %0a%0dMy Email Address is: ${email} %0a%0dMessage:%0a%0d ${message}`;
-  $("#sendEmail").attr("href",`mailto:lightjan2005@gmail.com?subject=Contact Me&body=${body}`);
-  document.getElementById("sendEmail").click();
-}
-  

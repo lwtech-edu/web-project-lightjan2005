@@ -4,7 +4,18 @@
     box-sizing: border-box;
 }
 
+/* color for beginning/ right/wrong */
+:root{
+    --hue-neutral:200;
+    --hue-wrong:0;
+    --hue-correct:145;
+}
+
+/* Qustion box style */
 body{
+
+    /* Create a variable for color */
+    --hue: var(--hue-neutral);
     padding:0;
     margin:0;
     display:flex;
@@ -12,9 +23,19 @@ body{
     width:100vw;
     height: 100vh;
     align-items:center;
-    background-color: blue;
+    background-color:hsl(var(--hue),100% ,20%);
 } 
 
+/* This is the background color for right answer */
+body.correct{
+    --hue:var(--hue-correct);
+}
+/* This is the background color for wrong answer */
+body.wrong{
+    --hue: var(--hue-wrong);
+}
+
+/* css for container */
 .container{
     width:800px;
     max-width:80%;
@@ -24,6 +45,7 @@ body{
     box-shadow: 0 0 10px 2px;
 }
 
+/* css for buttons */
 .buttonGrid{
     display:grid;
     grid-template-columns: repeat(2,auto);
@@ -31,8 +53,11 @@ body{
     margin:20px 0;
 }
 
+/* */
 .button{
-    border: 1px solid;
+    --hue: var(--hue-neutral);
+    background-color:hsl(var(--hue),100%,50%);
+    border: 1px solid hsl(var(--hue),100%,30%);
     border-radius:5px;
     padding: 5px 10px;
     color:white;
@@ -42,3 +67,28 @@ body{
 .button:hover{
     border-color:black;
 }
+
+.button.correct{
+    --hue:var(--hue-correct);
+    color:black;
+}
+.button.wrong{
+    --hue:var(--hue-wrong);
+}
+
+.startButton, .nextButton{
+    font-size: 1.5rem;
+    font-weight:bold;
+    padding:10px 20px;
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide{
+    display:none;
+}
+
